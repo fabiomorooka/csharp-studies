@@ -13,18 +13,36 @@ class Program
 
         do
         {
-            bool isInputValid;
+            string message = "Type a number, and then press Enter: ";
+            string errorMessage = "Invalid number. Please type a number, and then press Enter: ";
+
+            bool isInputValid=true;
+            string input;
             double inputNumber1;
             do
             {
-                string input = IOHelper.ReadInput("Type a number, and then press Enter: ");
+                if (isInputValid)
+                {
+                    input = IOHelper.ReadInput(message);
+                }
+                else
+                {
+                    input = IOHelper.ReadInput(errorMessage);
+                }
                 isInputValid = Validator.ValidateInputNumber(input, out inputNumber1);
             } while (!isInputValid);
 
             double inputNumber2;
             do
             {
-                string input = IOHelper.ReadInput("Type a number, and then press Enter: ");
+                if (isInputValid)
+                {
+                    input = IOHelper.ReadInput(message);
+                }
+                else
+                {
+                    input = IOHelper.ReadInput(errorMessage);
+                }
                 isInputValid = Validator.ValidateInputNumber(input, out inputNumber2);
             } while (!isInputValid);
 
