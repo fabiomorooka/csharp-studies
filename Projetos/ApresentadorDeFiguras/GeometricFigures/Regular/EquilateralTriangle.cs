@@ -11,7 +11,7 @@
 
         public override void CalculateArea()
         {
-            Area = (this.side * (this.side * Math.Sqrt(3))) /4;
+            Area = (this.side * (this.side * Math.Sqrt(3))) / 4;
         }
 
         public override void CalculatePerimeter()

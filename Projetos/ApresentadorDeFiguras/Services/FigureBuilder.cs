@@ -1,7 +1,7 @@
 ﻿using FigureDisplayer.Enums;
-using System.Reflection;
-using FigureDisplayer.Helpers;
 using FigureDisplayer.GeometricFigures;
+using FigureDisplayer.Helpers;
+using System.Reflection;
 
 namespace FigureDisplayer.Services
 {

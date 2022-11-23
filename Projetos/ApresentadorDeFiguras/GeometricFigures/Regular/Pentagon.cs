@@ -13,7 +13,7 @@ namespace FigureDisplayer.GeometricFigures.Regular
 
         public override void CalculateArea()
         {
-            Area = 5 * (Math.Pow(this.side, 2)/(4*Math.Tan(MathHelper.TransformDegreeInRadians(36))));
+            Area = 5 * (Math.Pow(this.side, 2) / (4 * Math.Tan(MathHelper.TransformDegreeInRadians(36))));
         }
 
         public override void CalculatePerimeter()

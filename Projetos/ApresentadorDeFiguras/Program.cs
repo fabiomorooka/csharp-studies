@@ -1,9 +1,8 @@
-﻿using FigureDisplayer.Displayer;
-using FigureDisplayer.Helpers;
-using FigureDisplayer.Validator;
-using FigureDisplayer.Services;
+﻿using FigureDisplayer.Enums;
 using FigureDisplayer.GeometricFigures;
-using FigureDisplayer.Enums;
+using FigureDisplayer.Helpers;
+using FigureDisplayer.Services;
+using FigureDisplayer.Validator;
 
 class Program
 {
@@ -41,12 +40,13 @@ class Program
             Console.WriteLine(string.Concat(Enumerable.Repeat("#", 75)) + "\n");
 
             string finishInput;
-            do {
+            do
+            {
                 IOHelper.ShowYesOrNoOptions();
                 finishInput = IOHelper.ReadInput("Do you wish to continue using the app? ");
                 isInputValid = Validator.ValidateYesOrNoOption(finishInput[0]);
             } while (!isInputValid);
-            
+
             if (finishInput[0] == 'n')
             {
                 endApp = true;

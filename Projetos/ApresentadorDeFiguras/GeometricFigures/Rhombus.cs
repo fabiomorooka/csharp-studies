@@ -13,12 +13,12 @@
 
         public override void CalculateArea()
         {
-            this.Area = (this.majorDiagonal * this.minorDiagonal) /2;
+            this.Area = (this.majorDiagonal * this.minorDiagonal) / 2;
         }
 
         public override void CalculatePerimeter()
         {
-            this.Perimeter = 4 * (Math.Sqrt(Math.Pow((this.majorDiagonal)/2, 2) + Math.Pow((this.minorDiagonal) / 2, 2)));
+            this.Perimeter = 4 * (Math.Sqrt(Math.Pow((this.majorDiagonal) / 2, 2) + Math.Pow((this.minorDiagonal) / 2, 2)));
         }
     }
 }
