@@ -1,10 +1,16 @@
-﻿namespace Calculator.GeometricFigures
+﻿using FigureDisplayer.Helpers;
+
+namespace FigureDisplayer.GeometricFigures
 {
     public class Circle : BaseFigure
     {
+        private double _pi = MathHelper.GetPiValue();
+        public double radius { get; private set; }
 
-        private const double _pi = Math.PI;
-        public double radius { get; set; }
+        public Circle(double radius)
+        {
+            this.radius = radius;
+        }
 
         public override void CalculateArea()
         {
