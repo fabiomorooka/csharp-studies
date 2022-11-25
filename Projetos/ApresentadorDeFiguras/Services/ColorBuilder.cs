@@ -80,7 +80,11 @@ namespace FigureDisplayer.Services
                 var information = constrInfo.GetParameters().Where(p => atributes.Contains(p.Name)).ToList();
                 foreach (var info in information)
                 {
-                    string variable = IOHelper.ReadInput($"Please insert the value of {info.Name} [in meters]: ");
+                    string variable = null;
+                    if (info.Name == "color")
+                        variable = IOHelper.ReadInput($"Please insert the figure {info.Name} : ");
+                    else
+                        variable = IOHelper.ReadInput($"Please insert the value of {info.Name} [in meters]: ");
                     results = AddInArray(results, Convert.ChangeType(variable, info.ParameterType));
                 }
             }
