@@ -27,14 +27,14 @@ class Program
             try
             {
                 string figureName = Enum.GetName(typeof(FiguresEnum), Convert.ToInt32(figureType));
-                BaseFigure figure = FigureBuilder.BuildFigure(figureType);
+                BaseFigure figure = SimpleBuilder.BuildFigure(figureType);
                 figure.CalculatePerimeter();
                 figure.CalculateArea();
                 Console.WriteLine($"The {figureName} built has {Math.Round(figure.Area, 3)} square meter of area and {Math.Round(figure.Perimeter, 3)} meters of perimeter.\n");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Building this figure had an error\n - Details: " + e.Message);
+                Console.WriteLine("Building this figure resulted in an error\n - Details: " + e.Message);
             }
 
             Console.WriteLine(string.Concat(Enumerable.Repeat("#", 75)) + "\n");

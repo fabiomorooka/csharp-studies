@@ -12,6 +12,12 @@ namespace FigureDisplayer.GeometricFigures
             this.radius = radius;
         }
 
+        public Circle(string color, double radius)
+        {
+            this.color = color;
+            this.radius = radius;
+        }
+
         public override void CalculateArea()
         {
             this.Area = _pi * Math.Pow(radius, 2);

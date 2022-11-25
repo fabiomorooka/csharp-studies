@@ -5,36 +5,46 @@ using System.Reflection;
 
 namespace FigureDisplayer.Services
 {
-    internal class FigureBuilder
+    internal class SimpleBuilder
     {
         public static BaseFigure BuildFigure(string figureNumber)
         {
             BaseFigure? result = null;
             Type? figureType = GetTypeFromClassName(Enum.GetName(typeof(FiguresEnum), Convert.ToInt32(figureNumber)));
             object[] paramArray = Array.Empty<object>();
-            int numberOfparams = 1;
+            int numberOfparams = 0;
             List<string> attributes = new List<string>();
 
             switch ((FiguresEnum)int.Parse(figureNumber))
             {
                 case FiguresEnum.Circle:
-                    numberOfparams = 1;
-                    attributes = new List<string>() { "radius" };
+                    attributes.Add("radius");
+                    numberOfparams++;
                     break;
                 case FiguresEnum.Rectangle:
-                    numberOfparams = 2;
-                    attributes = new List<string>() { "height", "width" };
+                    attributes.Add("height");
+                    numberOfparams++;
+                    attributes.Add("width");
+                    numberOfparams++;
                     break;
                 case FiguresEnum.EquilateralTriangle:
                 case FiguresEnum.Square:
                 case FiguresEnum.Pentagon:
                 case FiguresEnum.Hexagon:
-                    numberOfparams = 1;
-                    attributes = new List<string>() { "side" };
+                    attributes.Add("side");
+                    numberOfparams++;
                     break;
                 case FiguresEnum.Rhombus:
-                    numberOfparams = 2;
-                    attributes = new List<string>() { "majorDiagonal", "minorDiagonal" };
+                    attributes.Add("majorDiagonal");
+                    numberOfparams++;
+                    attributes.Add("minorDiagonal");
+                    numberOfparams++;
+                    break;
+                case FiguresEnum.IsoscelesTriangle:
+                    attributes.Add("equalSide");
+                    numberOfparams++;
+                    attributes.Add("differentSide");
+                    numberOfparams++;
                     break;
                 default:
                     break;
@@ -73,6 +83,7 @@ namespace FigureDisplayer.Services
             {
                 if (constrInfo.GetParameters().Length != numberOfparams)
                     continue;
+                var a = constrInfo.GetParameters();
                 var information = constrInfo.GetParameters().Where(p => atributes.Contains(p.Name)).ToList();
                 foreach (var info in information)
                 {

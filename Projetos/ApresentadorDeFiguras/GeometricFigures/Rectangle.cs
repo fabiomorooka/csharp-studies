@@ -11,6 +11,13 @@
             this.width = width;
         }
 
+        public Rectangle(string color, double height, double width)
+        {
+            this.color = color;
+            this.height = height;
+            this.width = width;
+        }
+
         public override void CalculateArea()
         {
             this.Area = this.height * this.width;

@@ -2,7 +2,6 @@
 {
     public class Hexagon : BaseFigure
     {
-        public string? color { get; private set; }
         public double side { get; private set; }
 
         public Hexagon(double side)

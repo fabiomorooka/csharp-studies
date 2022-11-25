@@ -9,6 +9,12 @@
             this.side = side;
         }
 
+        public Square(string color, double side)
+        {
+            this.color = color;
+            this.side = side;
+        }
+
         public override void CalculateArea()
         {
             Area = this.side * this.side;

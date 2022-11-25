@@ -10,6 +10,12 @@ namespace FigureDisplayer.GeometricFigures.Regular
         {
             this.side = side;
         }
+        public Pentagon(string color, double side)
+        {
+            this.color = color;
+            this.side = side;
+        }
+
 
         public override void CalculateArea()
         {

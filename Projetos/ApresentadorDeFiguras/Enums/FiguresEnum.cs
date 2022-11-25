@@ -8,6 +8,7 @@
         Square = 4,
         Pentagon = 5,
         Hexagon = 6,
-        Rhombus = 7
+        Rhombus = 7,
+        IsoscelesTriangle = 8
     }
 }

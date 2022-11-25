@@ -11,6 +11,13 @@
             this.minorDiagonal = minorDiagonal;
         }
 
+        public Rhombus(string color, double majorDiagonal, double minorDiagonal)
+        {
+            this.color = color;
+            this.majorDiagonal = majorDiagonal;
+            this.minorDiagonal = minorDiagonal;
+        }
+
         public override void CalculateArea()
         {
             this.Area = (this.majorDiagonal * this.minorDiagonal) / 2;
