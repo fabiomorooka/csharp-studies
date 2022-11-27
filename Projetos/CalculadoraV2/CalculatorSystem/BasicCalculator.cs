@@ -10,12 +10,16 @@ namespace CalculatorV2.CalculatorSystem
         private readonly ISubtraction _subtraction;
         private readonly IMultiplication _multiplication;
         private readonly IDivision _division;
+        private readonly IExponentiation _exponentiation;
+        private readonly IRadication _radication;
         public BasicCalculator(ICalculatorContext context)
         {
             _addition = context.Addition;
             _subtraction = context.Subtraction;
             _multiplication = context.Multiplication;
             _division = context.Division;
+            _exponentiation = context.Exponentiation;
+            _radication = context.Radication;
         }
 
         public double DoOperation(double num1, double num2, string operation)
@@ -36,6 +40,13 @@ namespace CalculatorV2.CalculatorSystem
                 case OperationsEnum.Divide:
                     if (num2 != 0)
                         result = _division.Divide(num1, num2);
+                    break;
+                case OperationsEnum.Exponentiation:
+                    result = _exponentiation.Exponent(num1, num2);
+                    break;
+                case OperationsEnum.Radication:
+                    if (num2 != 0)
+                        result = _radication.Radicate(num1, num2);
                     break;
                 default:
                     break;

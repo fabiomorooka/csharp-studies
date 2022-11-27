@@ -9,7 +9,9 @@ class Program
     static void Main(string[] args)
     {
         bool endApp = false;
-        ICalculatorContext calculatorContext = new CalculatorContext(new Addition(), new Subtraction(), new Multiplication(), new Division());
+        ICalculatorContext calculatorContext = new CalculatorContext(new Addition(), new Subtraction(), 
+                                                                                                        new Multiplication(), new Division(),
+                                                                                                            new Exponentiation(), new Radication());
         IIOHelper _iOHelper = new IOHelper();
         IValidator _validator = new Validator();
         

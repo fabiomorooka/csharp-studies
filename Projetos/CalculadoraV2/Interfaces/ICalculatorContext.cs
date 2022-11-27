@@ -11,5 +11,9 @@ namespace CalculatorV2.Interfaces
         IMultiplication Multiplication { get; }
 
         IDivision Division{ get; }
+        
+        IExponentiation Exponentiation { get; }
+        
+        IRadication Radication{ get; }
     }
 }
