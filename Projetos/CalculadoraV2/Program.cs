@@ -65,15 +65,11 @@ class Program
             try
             {
                 double result = calculator.DoOperation(inputNumber1, inputNumber2, operation);
-                if (double.IsNaN(result))
-                {
-                    Console.WriteLine("This operation will result in a mathematical error.\n");
-                }
-                else Console.WriteLine("Your result: {0:0.##}\n", result);
+                Console.WriteLine($"Your result: {result}\n");
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                throw;
             }
 
             Console.WriteLine(string.Concat(Enumerable.Repeat("#", 75)) + "\n");

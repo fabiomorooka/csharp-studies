@@ -27,14 +27,12 @@ namespace CalculatorV2.CalculatorSystem
                     result = _context.Multiplication.DoMathOperation(num1, num2);  
                     break;
                 case OperationsEnum.Divide:
-                    if (num2 != 0)
                         result = _context.Division.DoMathOperation(num1, num2);
                     break;
                 case OperationsEnum.Exponentiation:
                     result = _context.Exponentiation.DoMathOperation(num1, num2);
                     break;
                 case OperationsEnum.Radication:
-                    if (num2 != 0)
                         result = _context.Radication.DoMathOperation(num1, num2);
                     break;
                 default:
