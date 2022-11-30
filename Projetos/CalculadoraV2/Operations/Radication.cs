@@ -1,10 +1,10 @@
-﻿using CalculatorV2.Interfaces.Operations;
+﻿using CalculatorV2.Interfaces;
 
 namespace CalculatorV2.Helpers
 {
-    public class Radication : IRadication
+    public class Radication : IMathOperation
     {
-        public double Radicate(double num1, double num2)
+        public double DoMathOperation(double num1, double num2)
         {
             return Math.Pow(num1, 1 / num2);
         }

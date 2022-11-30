@@ -1,19 +1,19 @@
-﻿using CalculatorV2.Interfaces.Operations;
+﻿using CalculatorV2.Interfaces;
 
 namespace CalculatorV2.Interfaces
 {
     public interface ICalculatorContext
     {
-        IAddition Addition { get; }
+        IMathOperation Addition { get; }
 
-        ISubtraction Subtraction{ get; }
+        IMathOperation Subtraction { get; }
 
-        IMultiplication Multiplication { get; }
+        IMathOperation Multiplication { get; }
 
-        IDivision Division{ get; }
-        
-        IExponentiation Exponentiation { get; }
-        
-        IRadication Radication{ get; }
+        IMathOperation Division { get; }
+
+        IMathOperation Exponentiation { get; }
+
+        IMathOperation Radication { get; }
     }
 }

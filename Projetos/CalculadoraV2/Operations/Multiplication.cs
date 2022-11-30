@@ -1,10 +1,10 @@
-﻿using CalculatorV2.Interfaces.Operations;
+﻿using CalculatorV2.Interfaces;
 
 namespace CalculatorV2.Helpers
 {
-    public class Multiplication : IMultiplication
+    public class Multiplication : IMathOperation
     {
-        public double Multiply(double num1, double num2)
+        public double DoMathOperation(double num1, double num2)
         {
             return num1 * num2;
         }
