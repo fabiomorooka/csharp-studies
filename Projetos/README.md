@@ -4,3 +4,6 @@ Este repositório contém os projetos desenvolvidos ao longo dos estudos. Cada p
 
 ## Projetos
 - Calculadora
+- Calculadora
+- Apresentador de Figuras
+- Gerenciador de arquivos

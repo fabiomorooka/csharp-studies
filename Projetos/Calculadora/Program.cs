@@ -54,19 +54,12 @@ class Program
                 isInputValid = Validator.ValidateInputOperation(operation);
             } while (!isInputValid);
 
-            try
+            double result = BasicCalculator.DoOperation(inputNumber1, inputNumber2, operation);
+            if (double.IsNaN(result))
             {
-                double result = BasicCalculator.DoOperation(inputNumber1, inputNumber2, operation);
-                if (double.IsNaN(result))
-                {
-                    Console.WriteLine("This operation will result in a mathematical error.\n");
-                }
-                else Console.WriteLine("Your result: {0:0.##}\n", result);
+                Console.WriteLine("This operation will result in a mathematical error.\n");
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
-            }
+            else Console.WriteLine("Your result: {0:0.##}\n", result);
 
             Console.WriteLine(string.Concat(Enumerable.Repeat("#", 75)) + "\n");
 

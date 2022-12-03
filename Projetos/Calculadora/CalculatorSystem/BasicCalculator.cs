@@ -23,13 +23,6 @@ namespace Calculator.CalculatorSystem
                     if (num2 != 0)
                         result = num1 / num2;
                     break;
-                case OperationsEnum.Exponentiation:
-                    result = Math.Pow(num1, num2);
-                    break;
-                case OperationsEnum.Radication:
-                    if (num2 != 0)
-                        result = Math.Pow(num1, 1 / num2);
-                    break;
                 default:
                     break;
             }
