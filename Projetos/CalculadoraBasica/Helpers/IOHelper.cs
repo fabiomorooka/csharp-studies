@@ -1,6 +1,6 @@
-﻿using FigureDisplayerApp.Enums;
+﻿using BasicCalculatorApp.Enums;
 
-namespace FigureDisplayerApp.Helpers
+namespace BasicCalculatorApp.Helpers
 {
     public class IOHelper
     {
@@ -17,15 +17,15 @@ namespace FigureDisplayerApp.Helpers
             return input.ToLower();
         }
 
-        public static void ShowFiguresOptions()
+        public static void ShowOperationOptions()
         {
-            Console.WriteLine("Choose a figure from the following list:");
-            foreach (int option in Enum.GetValues(typeof(FiguresEnum)))
+            Console.WriteLine("Choose an operator from the following list:");
+            foreach (int option in Enum.GetValues(typeof(OperationsEnum)))
             {
-                Console.WriteLine($"\t{option} - {(FiguresEnum)option} ");
+                Console.WriteLine($"\t{option} - {(OperationsEnum)option} ");
             }
         }
-        public static void ShowYesOrNoOptions()
+        public static void ShowCloseOptions()
         {
             Console.WriteLine("Choose an option from the following list:");
             Console.WriteLine($"\ty - Yes");

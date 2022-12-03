@@ -1,4 +1,4 @@
-﻿namespace FigureDisplayer.GeometricFigures.Regular
+﻿namespace FigureDisplayerApp.GeometricFigures.Regular
 {
     public class Square : BaseFigure
     {

@@ -1,10 +1,11 @@
-﻿using FigureDisplayerApp.Enums;
+﻿using ScientificCalculatorApp.Interfaces;
+using ScientificCalculatorApp.Enums;
 
-namespace FigureDisplayerApp.Helpers
+namespace ScientificCalculatorApp.Helpers
 {
-    public class IOHelper
+    public class IOHelper: IIOHelper
     {
-        public static string ReadInput(string message)
+        public string ReadInput(string message)
         {
             Console.Write(message);
 
@@ -17,15 +18,15 @@ namespace FigureDisplayerApp.Helpers
             return input.ToLower();
         }
 
-        public static void ShowFiguresOptions()
+        public void ShowOperationOptions()
         {
-            Console.WriteLine("Choose a figure from the following list:");
-            foreach (int option in Enum.GetValues(typeof(FiguresEnum)))
+            Console.WriteLine("Choose an operator from the following list:");
+            foreach (int option in Enum.GetValues(typeof(OperationsEnum)))
             {
-                Console.WriteLine($"\t{option} - {(FiguresEnum)option} ");
+                Console.WriteLine($"\t{option} - {(OperationsEnum)option} ");
             }
         }
-        public static void ShowYesOrNoOptions()
+        public void ShowCloseOptions()
         {
             Console.WriteLine("Choose an option from the following list:");
             Console.WriteLine($"\ty - Yes");

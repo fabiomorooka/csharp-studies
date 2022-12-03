@@ -1,4 +1,4 @@
-﻿namespace FigureDisplayer.GeometricFigures
+﻿namespace FigureDisplayerApp.GeometricFigures
 {
     public abstract class BaseFigure
     {

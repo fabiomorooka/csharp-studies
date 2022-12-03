@@ -1,4 +1,4 @@
-﻿namespace FigureDisplayer.GeometricFigures
+﻿namespace FigureDisplayerApp.GeometricFigures
 {
     public class Rectangle : BaseFigure
     {

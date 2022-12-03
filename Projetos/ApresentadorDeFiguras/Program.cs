@@ -1,8 +1,8 @@
-﻿using FigureDisplayer.Enums;
-using FigureDisplayer.GeometricFigures;
-using FigureDisplayer.Helpers;
-using FigureDisplayer.Services;
-using FigureDisplayer.Validator;
+﻿using FigureDisplayerApp.Enums;
+using FigureDisplayerApp.GeometricFigures;
+using FigureDisplayerApp.Helpers;
+using FigureDisplayerApp.Services;
+using FigureDisplayerApp.Validator;
 
 class Program
 {
@@ -10,7 +10,7 @@ class Program
     {
         bool endApp = false;
 
-        Console.WriteLine("Figure Displayer Console Project\r");
+        Console.WriteLine("Welcome to th Figure Displayer Project! \r");
         Console.WriteLine(string.Concat(Enumerable.Repeat("#", 75)) + "\n");
 
         do

@@ -1,9 +1,9 @@
-﻿using FigureDisplayer.Enums;
-using FigureDisplayer.GeometricFigures;
-using FigureDisplayer.Helpers;
+﻿using FigureDisplayerApp.Enums;
+using FigureDisplayerApp.GeometricFigures;
+using FigureDisplayerApp.Helpers;
 using System.Reflection;
 
-namespace FigureDisplayer.Services
+namespace FigureDisplayerApp.Services
 {
     internal class SimpleBuilder
     {

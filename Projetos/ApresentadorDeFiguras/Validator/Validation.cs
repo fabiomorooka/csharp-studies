@@ -1,6 +1,6 @@
-﻿using FigureDisplayer.Enums;
+﻿using FigureDisplayerApp.Enums;
 
-namespace FigureDisplayer.Validator
+namespace FigureDisplayerApp.Validator
 {
     public class Validator
     {

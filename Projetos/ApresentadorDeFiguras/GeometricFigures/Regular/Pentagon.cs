@@ -1,6 +1,6 @@
-﻿using FigureDisplayer.Helpers;
+﻿using FigureDisplayerApp.Helpers;
 
-namespace FigureDisplayer.GeometricFigures.Regular
+namespace FigureDisplayerApp.GeometricFigures.Regular
 {
     public class Pentagon : BaseFigure
     {

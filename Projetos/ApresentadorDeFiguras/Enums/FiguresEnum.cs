@@ -1,4 +1,4 @@
-﻿namespace FigureDisplayer.Enums
+﻿namespace FigureDisplayerApp.Enums
 {
     public enum FiguresEnum
     {

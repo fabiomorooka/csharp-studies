@@ -1,4 +1,4 @@
-﻿namespace FigureDisplayer.Helpers
+﻿namespace FigureDisplayerApp.Helpers
 {
     public class MathHelper
     {

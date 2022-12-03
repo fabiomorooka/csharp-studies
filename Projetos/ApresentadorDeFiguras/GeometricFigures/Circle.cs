@@ -1,6 +1,6 @@
-﻿using FigureDisplayer.Helpers;
+﻿using FigureDisplayerApp.Helpers;
 
-namespace FigureDisplayer.GeometricFigures
+namespace FigureDisplayerApp.GeometricFigures
 {
     public class Circle : BaseFigure
     {

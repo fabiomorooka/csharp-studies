@@ -1,6 +1,6 @@
-﻿using FigureDisplayer.Enums;
+﻿using FigureDisplayerApp.Enums;
 
-namespace FigureDisplayer.Displayer
+namespace FigureDisplayerApp.System
 {
     public class BasicDisplayer
     {
