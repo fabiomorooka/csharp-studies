@@ -4,10 +4,6 @@ namespace Calculator.Validator
 {
     public class Validator
     {
-        public static List<string> _validOperations = Enum.GetValues(typeof(OperationsEnum))
-                                                                                .Cast<OperationsEnum>()
-                                                                                .Select(op => op.ToString())
-                                                                                .ToList();
         public static bool ValidateInputNumber(string inputNumber, out double outputNumber)
         {
             return double.TryParse(inputNumber, out outputNumber);

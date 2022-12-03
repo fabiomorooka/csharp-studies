@@ -1,6 +1,6 @@
 ﻿using Calculator.Enums;
 
-namespace InputOutputHelper
+namespace Calculator.Helpers
 {
     public class IOHelper
     {
